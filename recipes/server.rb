@@ -113,7 +113,8 @@ ip_address = address_for node["openstack"]["identity"]["bind_interface"]
 # If the search role is set, we search for memcache
 # servers via a Chef search. If not, we look at the
 # memcache.servers attribute.
-memcache_servers = memcached_servers.join ","  # from openstack-common lib
+#memcache_servers = memcached_servers.join ","  # from openstack-common lib
+memcache_servers = []
 
 uris = {
   'identity-admin' => identity_admin_endpoint.to_s.gsub('%25','%'),
